@@ -1,7 +1,7 @@
 package com.gmail.yuramitryahin;
 
 public class Counter {
-    public int count;
+    private int count;
 
     public int getCount() {
         return count;
