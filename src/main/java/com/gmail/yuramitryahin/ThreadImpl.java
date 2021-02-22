@@ -1,6 +1,9 @@
 package com.gmail.yuramitryahin;
 
+import org.apache.log4j.Logger;
+
 public class ThreadImpl extends Thread {
+    private static final Logger logger = Logger.getLogger(ThreadImpl.class);
     private Counter counter;
 
     public ThreadImpl(Counter counter) {
@@ -10,7 +13,7 @@ public class ThreadImpl extends Thread {
     public void run() {
         while (counter.getCount() < 100) {
             counter.increment();
-            System.out.println(Thread.currentThread().getName() + ":" + counter.getCount());
+            logger.info(Thread.currentThread().getName() + ":" + counter.getCount());
         }
     }
 }
