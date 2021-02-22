@@ -11,7 +11,7 @@ public class Counter {
         this.count = count;
     }
 
-    public void increment() {
-        count++;
+    public int increment() {
+        return count++;
     }
 }

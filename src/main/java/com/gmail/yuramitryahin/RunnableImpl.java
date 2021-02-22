@@ -12,8 +12,8 @@ public class RunnableImpl implements Runnable {
 
     public void run() {
         while (counter.getCount() < 100) {
-            counter.increment();
-            logger.info(Thread.currentThread().getName() + ":" + counter.getCount());
+            int result = counter.increment();
+            logger.info(Thread.currentThread().getName() + ":" + result);
         }
     }
 }
